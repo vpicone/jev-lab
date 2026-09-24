@@ -66,6 +66,7 @@ export function AnswerView({ question, answer, confidence }: { question?: Questi
 
   const levels = question?.type === 'score' ? question.criteria : Object.keys(probs).map(() => null);
   const max = Math.max(1, levels.length - 1);
+  const mostLikely = levels.reduce((best, _, i) => ((probs[String(i)] ?? 0) > (probs[String(best)] ?? 0) ? i : best), 0);
   return (
     <div className="space-y-2">
       <div className="flex flex-wrap items-baseline gap-2">
@@ -79,7 +80,7 @@ export function AnswerView({ question, answer, confidence }: { question?: Questi
             key={i}
             label={`${i} ${label ?? ''}`}
             p={probs[String(i)] ?? 0}
-            highlight={Math.round(answer.score) === i}
+            highlight={mostLikely === i}
             detail={label}
           />
         ))}

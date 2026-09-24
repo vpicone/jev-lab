@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Jev Lab",
-  description: "Explore TypeSafe AI's Jev evaluation model through Vercel AI Gateway",
+  description: "Test how Jev classifies, scores and verifies, and how confident it is.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
