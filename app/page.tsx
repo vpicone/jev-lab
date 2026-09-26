@@ -25,8 +25,7 @@ export default function Home() {
         <div>
           <h1 className="text-xl font-semibold tracking-tight">Jev Lab</h1>
           <p className="text-sm text-muted">
-            TypeSafe AI’s <span className="font-mono">typesafe-ai/jev</span> through Vercel AI Gateway: state in, typed answers with probabilities
-            out.
+            Test how Jev classifies, scores and verifies, and how confident it is.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-3">
